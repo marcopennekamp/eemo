@@ -1,0 +1,38 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+
+archivesBaseName = 'eemo'
+version = '0.1'
+group = 'me.pennekamp.eemo'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.google.code.findbugs:jsr305:3.0.0'
+    // compile 'org.antlr:antlr4:4.3'
+    compile files ('lib/antlr-4.4.1-dev-complete.jar')
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+            srcDir 'gen'
+        }
+    }
+}
+
+jar {
+    destinationDir = file ("$rootDir")
+    from files ('lib/antlr-4.4.1-dev-complete.jar').collect { it.isDirectory() ? it : zipTree(it) }
+    manifest {
+        attributes 'Implementation-Title': archivesBaseName,
+                   'Implementation-Version': version,
+                   'Main-Class': 'me.pennekamp.eemo.Eemo'
+    }
+}
