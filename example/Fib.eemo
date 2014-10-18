@@ -1,0 +1,36 @@
+# This program is a work in progress.
+
+(^-^)/
+
+# Read sequence length.
+(o-o)
+
+# Store sequence length on right stack.
+(>-<) ( °-°)
+
+# Store count 0 on right stack.
+(>-<) ( °-°)
+
+# Initialize 1 for fib(0).
+(^-^)
+(>-<)
+
+# Move sequence length, counter to the left.
+(°-° ) (°-° )
+
+# Fetch counter
+(\1/)
+\(^-^)/
+(° _° ) ( °-°)          # Save counter and move to right stack
+
+# If (counter - sequence_length) > 0
+(._.)
+(?-?)
+(^-^)/
+    
+\(._.)
+
+
+
+
+\(._.)

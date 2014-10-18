@@ -78,3 +78,7 @@ Id
 Skip
     :   [ \t\n\r] -> skip
     ;
+
+Comment
+    :   '#' ~('\n')* -> skip
+    ;
